@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col lg:space-y-30 sm:space-y-8 ">
+    <div class="flex flex-col lg:space-y-20 sm:space-y-8 ">
       <header>
         <headerD/>
       </header>

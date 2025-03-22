@@ -7,17 +7,18 @@
             <div class="relative flex space-x-3">
               <div>
                 <span :class="[event.iconBackground, 'flex size-8 items-center justify-center rounded-full ring-8 ring-white']">
-                  <component :is="event.icon" class="size-5 text-white" aria-hidden="true" />
+                  <img class="rounded-full" :src="event.src" alt="">
                 </span>
               </div>
               <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                 <div>
                   <p class="text-sm text-gray-500">
-                    {{ event.content }} <a :href="event.href" class="font-medium text-gray-900">{{ event.target }}</a>
+                    {{ event.content }} 
                   </p>
+                  <a :href="event.href" class="font-medium text-sm text-gray-900">{{ event.target }}</a>
                 </div>
                 <div class="text-right text-sm whitespace-nowrap text-gray-500">
-                  <time :datetime="event.datetime">{{ event.date }}</time>
+                  <p >{{ event.date }}</p>
                 </div>
               </div>
             </div>
@@ -33,18 +34,20 @@
   const timeline = [
     {
       id: 1,
-      content: 'Applied to',
-      target: 'Front End Developer',
+      src:'mavi.jpg',
+      content: 'Muebles America',
+      target: 'Full Stack Developer',
       href: '#',
-      date: 'Sep 20',
+      date: 'Sep 24 - Actualmente',
       datetime: '2020-09-20',
       icon: UserIcon,
       iconBackground: 'bg-gray-400',
     },
     {
       id: 2,
-      content: 'Advanced to phone screening by',
-      target: 'Bethany Blake',
+      src:'hp.jpg',
+      content: 'High Power de Mexico',
+      target: 'Frontend Developer',
       href: '#',
       date: 'Sep 22',
       datetime: '2020-09-22',
@@ -53,8 +56,9 @@
     },
     {
       id: 3,
-      content: 'Completed phone screening with',
-      target: 'Martha Gardner',
+      src:'cfe.png',
+      content: 'CFE (beario)',
+      target: 'Full Stack Developer',
       href: '#',
       date: 'Sep 28',
       datetime: '2020-09-28',
@@ -63,8 +67,9 @@
     },
     {
       id: 4,
-      content: 'Advanced to interview by',
-      target: 'Bethany Blake',
+      src:'ibm.png',
+      content: 'IBM',
+      target: 'Test Analyzer',
       href: '#',
       date: 'Sep 30',
       datetime: '2020-09-30',
