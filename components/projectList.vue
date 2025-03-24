@@ -96,7 +96,7 @@
   },
   {
     id: 4,
-    name: "FoodFinders adminpanel",
+    name: "FoodFinders Adminpanel",
     description: "Aplicación para delivery con Angular y Firebase.",
     technologies: ["angular.png", "firebase.png", "tailwind.jpg","typescript.jpg","docker.png"],
     status: "In progress",
@@ -107,7 +107,7 @@
   },
   {
     id: 5,
-    name: "SoftCarmel.com",
+    name: "SoftCarmel",
     description: "Dashboard para restaurantes con estadísticas y reportes.",
     technologies: ["vue.png", "tailwind.jpg","javascript.jpg"],
     status: "Complete",
@@ -118,7 +118,7 @@
   },
   {
     id: 6,
-    name: "Oaklan.net",
+    name: "Oaklan",
     description: "Aplicación para gestionar inventarios con Vue y Node.js.",
     technologies: ["vue.png", "node.png", "vuetify.png","javascript.jpg"],
     status: "Complete",
