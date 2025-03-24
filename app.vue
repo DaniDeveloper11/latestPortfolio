@@ -6,6 +6,7 @@
       <NuxtPage/>
 
     </NuxtLayout>
+    <downloadButton class="fixed bottom-5 right-5"></downloadButton>
   </div>
 </template>
 <script setup>

@@ -68,23 +68,23 @@ liveDemo: "https://azul-erp.com"
   <tbody class="divide-y divide-gray-200 dark:text-gray-200">
     <tr>
       <td class="px-4 py-2">Vue.js</td>
-      <td class="px-4 py-2">TailwindCss</td>
-      <td class="px-4 py-2">Pinia</td>
+      <td class="px-4 py-2">Nest.js</td>
+      <td class="px-4 py-2">Git</td>
     </tr>
     <tr>
       <td class="px-4 py-2">Nest.js</td>
-      <td class="px-4 py-2">Express</td>
+      <td class="px-4 py-2">TailwindCss</td>
+      <td class="px-4 py-2">DialogFlow</td>
+    </tr>
+    <tr>
       <td class="px-4 py-2">Typescript</td>
-    </tr>
-    <tr>
-      <td class="px-4 py-2">Tailwind CSS</td>
-      <td class="px-4 py-2">Sequelize</td>
-      <td class="px-4 py-2">Figma</td>
-    </tr>
-    <tr>
-      <td class="px-4 py-2">Git</td>
+      <td class="px-4 py-2">Javascript</td>
       <td class="px-4 py-2">Docker</td>
-      <td class="px-4 py-2">Postman</td>
+    </tr>
+    <tr>
+      <td class="px-4 py-2"></td>
+      <td class="px-4 py-2"></td>
+      <td class="px-4 py-2"></td>
     </tr>
   </tbody>
 </table>
