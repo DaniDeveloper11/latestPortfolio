@@ -9,7 +9,9 @@
                                <span class="text-gray-900 dark:text-gray-200 ">{{ item.name }}</span>
               </div>
               <Disclosure as="div" v-else default-open="true" v-slot="{ open }">
-                <DisclosureButton :class="[item.current ? 'bg-gray-50' : 'hover:bg-gray-50', 'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm/6 font-semibold text-gray-700 dark:text-gray-200 cursor-pointer']">
+                <DisclosureButton :class="[
+    isSelectedTechnology(item.src) ? 'bg-green-50 ring-2 ring-green-400' : '',
+    'clases-default', 'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm/6 font-semibold text-gray-700 dark:text-gray-200 cursor-pointer']">
                     <nuxt-icon class="text-gray-900 dark:text-gray-200" :name='item.icon'></nuxt-icon>
                   {{ item.name }}
                   <ChevronRightIcon :class="[open ? 'rotate-90 text-gray-500' : 'text-gray-400', 'size-5 shrink-0']" aria-hidden="true" />
@@ -36,8 +38,13 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronRightIcon } from '@heroicons/vue/20/solid'
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 
+import { useSelectedProjectStore } from '@/stores/useSelectedProjectStore'
+const projectStore = useSelectedProjectStore();
+
+
+const isSelectedTechnology = projectStore.isSelectedTechnology 
 const navigation = [
 //   { name: 'Dashboard', href: '#', current: true },
   {

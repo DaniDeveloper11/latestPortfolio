@@ -1,13 +1,13 @@
 <template>
     <ul role="list" class="divide-y divide-gray-100">
-      <li v-for="project in projects" :key="project.id" 
-      class="flex items-center justify-between gap-x-6 py-5">
+      <li v-for="project in projects" :key="project.id" @click="selectProject(project)" 
+      class="flex items-center justify-between gap-x-6 py-5 cursor-pointer">
         <div class="min-w-0">
           <div class="flex items-start gap-x-3">
             <p class="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">{{ project.name }}</p>
             <p :class="[statuses[project.status], 'mt-0.5 rounded-md px-1.5 py-0.5 text-xs font-medium whitespace-nowrap ring-1 ring-inset']">{{ project.status }}</p>
           </div>
-          <div class="mt-1 flex items-center gap-x-2 text-xs/5 text-gray-500">
+          <!-- <div class="mt-1 flex items-center gap-x-2 text-xs/5 text-gray-500">
             <p class="whitespace-nowrap">
               Due on <time :datetime="project.dueDateTime">{{ project.dueDate }}</time>
             </p>
@@ -15,7 +15,7 @@
               <circle cx="1" cy="1" r="1" />
             </svg>
             <p class="truncate">Created by {{ project.createdBy }}</p>
-          </div>
+          </div> -->
         </div>
         <div class="flex flex-none items-center gap-x-4">
          <techGroup :images="project.technologies"></techGroup>
@@ -59,6 +59,9 @@
   // import { EllipsisVerticalIcon } from '@heroicons/vue/20/solid'
   // import { fetchGithubProjects } from "@/services/githubService";
   import techGroup  from '@/components/techGroup.vue';
+  import { useSelectedProjectStore } from '@/stores/useSelectedProjectStore'
+
+  const selectedProject = useSelectedProjectStore()
 
   const projects = [
   {
@@ -67,9 +70,6 @@
     description: " Con una interfaz intuitiva y herramientas avanzadas, AzulERP permite llevar un control eficiente de inventarios, facturación, compras, ventas y contabilidad en un solo lugar..",
     technologies: ["Vue.png", "Tailwind.jpg", "javascript.jpg", "node.png","sql.png","vite.jpg"],
     status: "Complete",
-    createdBy: "Daniel Montes",
-    dueDate: "2024-03-10",
-    dueDateTime: "2024-03-10T23:59:59Z",
     href: "https://miportafolio.com",
   },
   {
@@ -79,8 +79,7 @@
     technologies: ["vue.png", "php.png", "javascript.jpg","vuetify.png","git.png"],
     status: "In progress",
     createdBy: "Daniel Montes",
-    dueDate: "2024-05-01",
-    dueDateTime: "2024-05-01T23:59:59Z",
+
     href: "https://ecommercevue.com",
   },
   {
@@ -90,8 +89,7 @@
     technologies: ["storefront.jpg", "bootstrap.jpg", "typescript.jpg", "docker.png","node.png","graphql.png","git.png"],
     status: "In progress",
     createdBy: "Daniel Montes",
-    dueDate: "2024-05-01",
-    dueDateTime: "2024-05-01T23:59:59Z",
+
     href: "https://ecommercevue.com",
   },
   {
@@ -101,8 +99,7 @@
     technologies: ["angular.png", "firebase.png", "tailwind.jpg","typescript.jpg","docker.png"],
     status: "In progress",
     createdBy: "Daniel Montes",
-    dueDate: "2024-06-15",
-    dueDateTime: "2024-06-15T23:59:59Z",
+
     href: "https://foodfinders.com",
   },
   {
@@ -112,8 +109,7 @@
     technologies: ["vue.png", "tailwind.jpg","javascript.jpg"],
     status: "Complete",
     createdBy: "Daniel Montes",
-    dueDate: "2023-12-20",
-    dueDateTime: "2023-12-20T23:59:59Z",
+
     href: "https://dashboard.com",
   },
   {
@@ -123,20 +119,24 @@
     technologies: ["vue.png", "node.png", "vuetify.png","javascript.jpg"],
     status: "Complete",
     createdBy: "Daniel Montes",
-    dueDate: "2023-07-15",
-    dueDateTime: "2023-07-15T23:59:59Z",
+
     href: "https://inventariosapp.com",
   }
 ];
 ;
 
-const getSlug = (name) => {
-  return name.toLowerCase().replace(/\s+/g, "-").replace(/'/g, "");
-};
-  const statuses = {
+const statuses = {
     Complete: 'text-green-700 bg-green-50 ring-green-600/20',
     'In progress': 'text-gray-600 bg-gray-50 ring-gray-500/10',
     Archived: 'text-yellow-800 bg-yellow-50 ring-yellow-600/20',
-  }
+  };
+
+const getSlug = (name) => {
+  return name.toLowerCase().replace(/\s+/g, "-").replace(/'/g, "");
+};
+
+const selectProject = ( project ) => {
+  selectedProject.setProject(project)
+}
   
   </script>
