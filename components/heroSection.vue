@@ -1,6 +1,9 @@
 <template>
     
-        <section class=" lg:relative mx-auto lg:mx-40 max-w-7xl px-4 sm:px-6 lg:px-8 pt-5 bg-white dark:bg-gray-700 flex-col items-center  text-gray-900 dark:text-white py-2 ">
+        <section class=" lg:relative mx-auto lg:mx-40 max-w-7xl px-4 sm:px-6 lg:px-8 pt-5
+         bg-white 
+         dark:bg-gradient-to-b dark:from-green-400 dark:via-green-700 dark:to-black dark:text-gray-200 py-2
+         flex-col items-center  text-gray-900  ">
         <img src="/perfil.jpg" alt="perfil" class="w-16 h-16 rounded-full mb-4" >
 
         <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
@@ -33,5 +36,5 @@ const linkArray = ['github','linkedin','instagram','twiter']
         width: 2rem;
         height: 2rem;
     }
-
+    
 </style>

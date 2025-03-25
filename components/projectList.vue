@@ -1,5 +1,5 @@
 <template>
-    <ul role="list" class="divide-y divide-gray-100">
+    <ul role="list" class="divide-y divide-gray-200 dark:divide-green-500">
       <li v-for="project in projects" :key="project.id" @click="selectProject(project)" 
       class="flex items-center justify-between gap-x-6 py-5 cursor-pointer">
         <div class="min-w-0">
