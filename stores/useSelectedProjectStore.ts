@@ -12,8 +12,9 @@ actions: {
     clearProject() {
         this.selected = null
     },
-    isSelectedTechnology(techSrc: string): boolean {
-        return this.selected?.technologies.includes(techSrc) ?? false
+    isSelectedTechnology(techName: string): boolean {
+        // console.log(techSrc)
+        return this.selected?.techName.includes(techName) ?? false
       }
 }
 })

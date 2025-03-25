@@ -69,6 +69,7 @@
     name: "Azul ERP",
     description: " Con una interfaz intuitiva y herramientas avanzadas, AzulERP permite llevar un control eficiente de inventarios, facturación, compras, ventas y contabilidad en un solo lugar..",
     technologies: ["Vue.png", "Tailwind.jpg", "javascript.jpg", "node.png","sql.png","vite.jpg"],
+    techName : ['Vue','Node','Vuetify','Javascript','Git'],
     status: "Complete",
     href: "https://miportafolio.com",
   },
@@ -79,7 +80,7 @@
     technologies: ["vue.png", "php.png", "javascript.jpg","vuetify.png","git.png"],
     status: "In progress",
     createdBy: "Daniel Montes",
-
+    techName : ['Vue','PHP','Vuetify','Javascript','Git','SQL','NPM'],
     href: "https://ecommercevue.com",
   },
   {
@@ -89,7 +90,7 @@
     technologies: ["storefront.jpg", "bootstrap.jpg", "typescript.jpg", "docker.png","node.png","graphql.png","git.png"],
     status: "In progress",
     createdBy: "Daniel Montes",
-
+    techName : ['Vue','VueStoreFront','Bootstrap','Javascript','Git','SQL','NPM','Typescript','GraphQL','Node','Docker'],
     href: "https://ecommercevue.com",
   },
   {
@@ -99,7 +100,7 @@
     technologies: ["angular.png", "firebase.png", "tailwind.jpg","typescript.jpg","docker.png"],
     status: "In progress",
     createdBy: "Daniel Montes",
-
+    techName : ['Angular','Tailwindcss','Git','Firebase','NPM','Typescript','Node','Docker'],
     href: "https://foodfinders.com",
   },
   {
@@ -109,7 +110,7 @@
     technologies: ["vue.png", "tailwind.jpg","javascript.jpg"],
     status: "Complete",
     createdBy: "Daniel Montes",
-
+    techName : ['Vue','Tailwindcss','Git','NPM','Javascript'],
     href: "https://dashboard.com",
   },
   {
@@ -119,7 +120,7 @@
     technologies: ["vue.png", "node.png", "vuetify.png","javascript.jpg"],
     status: "Complete",
     createdBy: "Daniel Montes",
-
+    techName : ['Vue','Node','Vuetify','Javascript','Git','SQL','NPM'],
     href: "https://inventariosapp.com",
   }
 ];
