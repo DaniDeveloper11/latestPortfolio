@@ -1,7 +1,7 @@
 <template>
     <ul role="list" class="divide-y divide-green-500 dark:divide-green-800">
       <li v-for="project in projects" :key="project.id" @click="selectProject(project)" 
-      class="flex items-center justify-between gap-x-6 py-5 cursor-pointer">
+      class="flex items-center justify-between gap-x-6 py-5 cursor-pointer dark:hover:bg-green-900 px-4">
         <div class="min-w-0">
           <div class="flex items-start gap-x-3">
             <p class="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">{{ project.name }}</p>
