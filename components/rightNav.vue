@@ -5,7 +5,7 @@
           <ul role="list" class="-mx-2 space-y-1">
             <li v-for="item in navigation" :key="item.name">
               <div v-if="!item.children" :href="item.href" 
-              :class="[isSelectedTechnology(item.name) ? 'bg-amber-500 scale-[1.07]' : '',
+              :class="[isSelectedTechnology(item.name) ? 'bg-green-500 scale-[1.07]' : '',
               item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
               ' block rounded-md py-2 pr-2  text-sm/6 font-semibold text-gray-700 cursor-pointer transition-all duration-400 ease-in-out']"
               >
@@ -14,19 +14,21 @@
               </div>
               <Disclosure as="div" v-else default-open="true" v-slot="{ open }">
                 <DisclosureButton :class="[isSelectedTechnology(item.src) ? 'bg-green-50 ring-2 ring-green-400' : '',
-                  'clases-default', 'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm/6 font-semibold text-gray-700 dark:text-gray-200 cursor-pointer']">
-                    <nuxt-icon class="text-gray-900 dark:text-gray-200" :name='item.icon'></nuxt-icon>
+                  'clases-default', 'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm/6 font-extrabold text-gray-700 dark:text-gray-200 cursor-pointer']">
+                    <nuxt-icon class="text-gray-900 dark:text-green-500" :name='item.icon'></nuxt-icon>
                   {{ item.name }}
-                  <ChevronRightIcon :class="[open ? 'rotate-90 text-gray-500' : 'text-gray-400', 'size-5 shrink-0']" aria-hidden="true" />
+                  <ChevronRightIcon :class="[open ? 'rotate-90 text-gray-200' : 'text-gray-200', 'size-6 shrink-0 font-bold']" aria-hidden="true" />
 
                 </DisclosureButton>
                 <DisclosurePanel as="ul" class="mt-1 px-2">
                   <li v-for="subItem in item.children" :key="subItem.name">
                     <DisclosureButton as="div" class="cursor-pointer w-50" 
-                    :class="[isSelectedTechnology(subItem.name) ? 'bg-amber-400 scale-[1.15] ring-2 ring-amber-600 drop-shadow-2xl shadow-amber-600' : '',
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    :class="[isSelectedTechnology(subItem.name) ? 'bg-green-500 scale-[1.15] drop-shadow-2xl text-white' : '',
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-100 hover:bg-gray-700 hover:text-white',
                     'block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 dark:text-gray-200 font-extrabold transition-all duration-400 ease-in-out']">
-                        <nuxt-img class="inline-block size-8 mr-3 rounded-full" :src="subItem.src"></nuxt-img>
+                        <nuxt-img 
+                        :class="[isSelectedTechnology(subItem.name) ? 'size-8' : 'size-8','inline-block  mr-3 rounded-full']"
+                        :src="subItem.src"></nuxt-img>
                         {{ subItem.name }}
                     </DisclosureButton>
                   </li>

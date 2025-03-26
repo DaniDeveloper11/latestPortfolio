@@ -12,7 +12,7 @@ liveDemo: "https://azul-erp.com"
 ---
 
 
-# **AZUL ERP**
+# **FoodFinder Admin Panel**
 ---
 <br>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-300 dark:bg-black" :class="colorMode">
+  <div class="transition-colors duration-500 ease-in-out bg-gray-100 dark:bg-black" >
     <!-- <NuxtRouteAnnouncer />
     <NuxtWelcome /> -->
     <NuxtLayout>

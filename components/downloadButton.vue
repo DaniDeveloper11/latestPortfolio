@@ -5,7 +5,7 @@
     cursor: pointer;
     background: white;
     border: none;
-    background: #8080ff;
+    /* background: #8080ff; */
     border-radius: 30px;
     overflow: hidden;
   }
@@ -140,7 +140,7 @@
     >
       <button
         class="download-btn pixel-corners"
-        :style="{ backgroundColor: isDownloaded ? '#4CAF50' : '#8080ff' }"
+        :style="{ backgroundColor: isDownloaded ? '#1a3cb8' : '#00a63d' }"
       >
         <div class="button-content">
           <div class="svg-container">

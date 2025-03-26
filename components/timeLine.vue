@@ -12,12 +12,12 @@
               </div>
               <div class="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                 <div>
-                  <p class="text-sm text-gray-500">
+                  <p class="text-sm text-gray-500 dark:text-white">
                     {{ event.content }} 
                   </p>
-                  <a :href="event.href" class="font-medium text-sm text-gray-900">{{ event.target }}</a>
+                  <a :href="event.href" class="font-medium text-sm text-gray-900 dark:text-gray-200">{{ event.target }}</a>
                 </div>
-                <div class="text-right text-sm whitespace-nowrap text-gray-500">
+                <div class="text-right text-sm whitespace-nowrap text-gray-600 dark:text-gray-200">
                   <p >{{ event.date }}</p>
                 </div>
               </div>
