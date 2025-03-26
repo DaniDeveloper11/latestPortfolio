@@ -20,7 +20,7 @@
         <div class="flex flex-none items-center gap-x-4">
          <techGroup :images="project.technologies"></techGroup>
           <nuxt-link :to="`/projects/${getSlug(project.name)}`"
-          class="hidden rounded-md bg-white dark:bg-green-500 dark:hover:bg-green-600 dark:text-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50 sm:block"
+          class="hidden rounded-md bg-white dark:bg-gray-900 dark:hover:bg-green-700 dark:text-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-xs  sm:block"
             >View project<span class="sr-only">, {{ project.name }}</span></nuxt-link
           >
           <!-- <Menu as="div" class="relative flex-none">

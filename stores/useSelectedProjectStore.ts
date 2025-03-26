@@ -16,5 +16,11 @@ actions: {
         // console.log(techSrc)
         return this.selected?.techName.includes(techName) ?? false
       }
+},
+getters: {
+    isAnyTechnologySelected(state): boolean {
+        return Array.isArray(state.selected?.techName) && state.selected.techName.length > 0
+    }
 }
+
 })

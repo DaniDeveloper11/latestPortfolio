@@ -44,13 +44,26 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronRightIcon } from '@heroicons/vue/20/solid'
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, watch} from 'vue'
 
 import { useSelectedProjectStore } from '@/stores/useSelectedProjectStore'
 const projectStore = useSelectedProjectStore();
 
 
-const isSelectedTechnology = projectStore.isSelectedTechnology 
+const isSelectedTechnology = projectStore.isSelectedTechnology
+
+watch(
+  () => projectStore.isAnyTechnologySelected,
+  (newVal) => {
+    console.log("nuevo valor",newVal)
+    if(newVal === true){
+      setTimeout(() => {
+        projectStore.clearProject();
+      },3000)
+    }
+  }
+)
+
 const navigation = [
 //   { name: 'Dashboard', href: '#', current: true },
   {
