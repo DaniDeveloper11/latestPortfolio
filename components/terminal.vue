@@ -62,7 +62,7 @@ onMounted(() => {
   // setTimeout(() => {
   //  startFlow();
 
-  // },2000)
+  // },3000)
 });
 
 // **Inicia el flujo completo de la terminal**

@@ -24,10 +24,9 @@
             <h3 class="flex text-base font-semibold text-green-800 dark:text-gray-200">
                 <nuxt-icon name='gmail' class="mr-2 text-green-500 dark:text-green-600"></nuxt-icon>
                   Dejame un Mensaje</h3>
-            <p class="text-gray-900 dark:text-gray-200">is simply dummy text of the printing and typesetting industry</p>
+            <p class="text-gray-900 dark:text-gray-200">Me comunicare contigo a la brevedad, solo deja correo y un mensaje </p>
             </div>
-            <div class="flex flex-col space-y-3">
-                <input type="email" name="email" id="email" aria-label="Email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600 sm:text-sm/6" placeholder="you@example.com" />
+            <div class="">
                 <emailBody></emailBody>
             </div>
 

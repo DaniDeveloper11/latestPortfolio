@@ -2,10 +2,21 @@
     <div class="items-start ">
 
       <div class="min-w-0 flex-1">
-        <form action="#" class="relative">
+        <form @submit.prevent="handleSubmit" class="relative space-y-2">
+
+          <input v-model="email" type="email" name="email" id="email" aria-label="Email" 
+            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-600 sm:text-sm/6"
+            placeholder="tu@correo.com"
+            
+           />
+
           <div class="rounded-lg bg-white outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-green-600">
-            <label for="comment" class="sr-only">Add your comment</label>
-            <textarea rows="3" name="comment" id="comment" class="block w-full resize-none bg-transparent px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="Add your comment..." />
+            <label for="comment" class="sr-only">Agrega un comentario</label>
+            <textarea rows="3" name="comment" id="comment" 
+            class="block w-full resize-none bg-transparent px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
+             placeholder="Agrega un comentario..." 
+            v-model="comment"
+             ></textarea>
   
             <!-- Spacer element to match the height of the toolbar -->
             <div class="py-2" aria-hidden="true">
@@ -83,6 +94,11 @@
   } from '@heroicons/vue/20/solid'
   import { Listbox, ListboxButton, ListboxLabel, ListboxOption, ListboxOptions } from '@headlessui/vue'
   
+  import { sentMail } from '~/services/contactService'
+  import { useAlertStore } from '@/stores/useAlertStore'
+
+  const alertStore = useAlertStore()
+
   const moods = [
     { name: 'Excited', value: 'excited', icon: FireIcon, iconColor: 'text-white', bgColor: 'bg-red-500' },
     { name: 'Loved', value: 'loved', icon: HeartIcon, iconColor: 'text-white', bgColor: 'bg-pink-400' },
@@ -92,5 +108,25 @@
     { name: 'I feel nothing', value: null, icon: XMarkIcon, iconColor: 'text-gray-400', bgColor: 'bg-transparent' },
   ]
   
+  const email = ref('');
+  const comment = ref('');
+  const success = ref(false);
+  
+const handleSubmit = async () => {
+  try{
+    await sentMail({
+      email:email.value,
+      message:comment.value
+    });
+    success.value = true;
+    email.value = '';
+    comment.value = ''
+    alertStore.showSuccess()
+
+  }catch(error){
+    console.error(error);
+  }
+}
+
   const selected = ref(moods[5])
   </script>
