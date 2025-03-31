@@ -15,8 +15,8 @@
             empower regular people to explore space on their own terms.
         </p>
         <div class="flex space-x-4 my-6">
-            <a v-for="link in linkArray" :key="link" href="#" class="text-gray-400 dark:hover:text-white">
-                <nuxt-icon :name='link'></nuxt-icon>
+            <a v-for="link in linkArray" :key="link" :href="link.link" target="_blank" class="text-gray-400 dark:hover:text-white">
+                <nuxt-icon :name='link.icon'></nuxt-icon>
             </a>
         </div>
         <terminal class="hidden lg:block absolute top-20 right-0 -mr-40"></terminal>
@@ -29,7 +29,12 @@
 </template>
 <script setup>
 import terminal from './terminal.vue';
-const linkArray = ['github','linkedin','instagram','twiter']
+// const linkArray = ['github','linkedin','whatsapp']
+const linkArray = [
+    {icon:'github',link:'https://github.com/DaniDeveloper11'},
+    {icon:'linkedin',link:'https://www.linkedin.com/in/daniel-montes-28686a258/'},
+    {icon:'whatsapp',link:'https://wa.me/5213314857062?text=Hola%20Daniel%2C%20Estoy%20interesado%20en%20tu%20perfil'}
+    ]
 </script>
 <style>
     .nuxt-icon svg{

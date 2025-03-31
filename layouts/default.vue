@@ -14,13 +14,12 @@
         </div>
       </main>
   
-      <footer>
-        <p>© 2025 Daniel Montes</p>
-      </footer>
+      <footerComponent></footerComponent>
     </div>
   </template>
   
     <script setup>
     import headerD from '@/components/headerD.vue'
     import rightNav from '~/components/rightNav.vue';
+    import footerComponent from '~/components/footer.vue';
     </script>
