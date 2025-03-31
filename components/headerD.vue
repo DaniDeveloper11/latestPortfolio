@@ -13,7 +13,7 @@
             <Bars3Icon class="size-6" aria-hidden="true" />
           </button>
         </div>
-        <PopoverGroup class="hidden lg:flex lg:gap-x-12 bg-green-500 dark:bg-green-700 px-8 py-1.5 rounded-4xl opacity-90">
+        <PopoverGroup class="hidden lg:flex lg:gap-x-12 bg-green-500 dark:bg-green-700 px-8 py-1.5 rounded-4xl opacity-90 z-50">
           <Popover class="relative">
             <PopoverButton class="flex items-center gap-x-1 text-sm/6 font-semibold  text-white">
               Proyectos
@@ -21,18 +21,23 @@
             </PopoverButton>
   
             <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-              <PopoverPanel class="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5">
+              <PopoverPanel class="absolute top-full -left-8 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white dark:bg-[#1d1f21] ring-1 shadow-lg ring-gray-900/5 ">
                 <div class="p-4">
-                  <div v-for="item in products" :key="item.name" class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <component :is="item.icon" class="size-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                  <div v-for="item in projects" :key="item.id"
+                  :class="`group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 dark:hover:bg-gray-700 ${item.color}`"
+                  >
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white dark:bg-[#1d1f21] transition duration-300 border border-gray-200">
+                      <!-- <component :is="item.icon" class="size-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" /> -->
+                       <nuxt-icon :name="item.icon" class="text-gray-600 transition duration-300 group-hover:text-inherit"
+                       ></nuxt-icon>
                     </div>
                     <div class="flex-auto">
-                      <a :href="item.href" class="block font-semibold text-gray-900">
+                      <nuxt-link :to="`/projects/${getSlug(item.name)}`" 
+                      class="block font-semibold text-gray-900 dark:text-gray-100 ">
                         {{ item.name }}
                         <span class="absolute inset-0" />
-                      </a>
-                      <p class="mt-1 text-gray-600">{{ item.description }}</p>
+                      </nuxt-link>
+                      <p class="mt-1 text-gray-600 dark:text-gray-100 dark:hover:text-gray-900 line-clamp-1">{{ item.description }}</p>
                     </div>
                   </div>
                 </div>
@@ -46,9 +51,9 @@
             </transition>
           </Popover>
   
-          <a href="#" class="text-sm/6 font-semibold text-white">Experiencia</a>
           <a href="#" class="text-sm/6 font-semibold text-white">Acerca de mi</a>
-          <a href="#" class="text-sm/6 font-semibold text-white">Contactame</a>
+          <a href="#experiencia" class="text-sm/6 font-semibold text-white">Mi experiencia</a>
+          <a href="#contacto" class="text-sm/6 font-semibold text-white">Contactame</a>
         </PopoverGroup>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <!-- <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
@@ -131,7 +136,84 @@
     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
     { name: 'Contact sales', href: '#', icon: PhoneIcon },
   ]
+  const getSlug = (name) => {
+  return name.toLowerCase().replace(/\s+/g, "-").replace(/'/g, "");
+};
   const colorMode = useColorMode()
   
   const mobileMenuOpen = ref(false)
+
+  const projects = [
+  {
+    id: 1,
+    name: "Azul ERP",
+    description: " Con una interfaz intuitiva y herramientas avanzadas, AzulERP permite llevar un control eficiente de inventarios, facturación, compras, ventas y contabilidad en un solo lugar..",
+    technologies: ["Vue.png", "Tailwind.jpg", "javascript.jpg", "node.png","sql.png","vite.jpg"],
+    techName : ['Vue','Node','Vuetify','Javascript','Git'],
+    status: "Complete",
+    href: "https://miportafolio.com",
+    icon: "agave",
+    color:"text-blue-500"
+  },
+  {
+    id: 2,
+    name: "Lion's Protection",
+    description: "Tienda en línea conectada a Magento con Vue Storefront.",
+    technologies: ["vue.png", "php.png", "javascript.jpg","vuetify.png","git.png"],
+    status: "In progress",
+    createdBy: "Daniel Montes",
+    techName : ['Vue','PHP','Vuetify','Javascript','Git','SQL','NPM'],
+    href: "https://ecommercevue.com",
+    icon:'carro',
+    color:"text-red-500"
+  },
+  {
+    id: 3,
+    name: "Muebles America",
+    description: "Tienda en línea conectada a Magento con Vue Storefront.",
+    technologies: ["storefront.jpg", "bootstrap.jpg", "typescript.jpg", "docker.png","node.png","graphql.png","git.png"],
+    status: "In progress",
+    createdBy: "Daniel Montes",
+    techName : ['Vue','VueStoreFront','Bootstrap','Javascript','Git','SQL','NPM','Typescript','GraphQL','Node','Docker'],
+    href: "https://ecommercevue.com",
+    icon: 'carrito-de-compras',
+    color:"text-indigo-500"
+  },
+  {
+    id: 4,
+    name: "FoodFinders Adminpanel",
+    description: "Aplicación para delivery con Angular y Firebase.",
+    technologies: ["angular.png", "firebase.png", "tailwind.jpg","typescript.jpg","docker.png"],
+    status: "In progress",
+    createdBy: "Daniel Montes",
+    techName : ['Angular','Tailwindcss','Git','Firebase','NPM','Typescript','Node','Docker'],
+    href: "https://foodfinders.com",
+    icon:"restaurante",
+    color:"text-orange-500"
+  },
+  {
+    id: 5,
+    name: "SoftCarmel",
+    description: "Dashboard para restaurantes con estadísticas y reportes.",
+    technologies: ["vue.png", "tailwind.jpg","javascript.jpg"],
+    status: "Complete",
+    createdBy: "Daniel Montes",
+    techName : ['Vue','Tailwindcss','Git','NPM','Javascript'],
+    href: "https://dashboard.com",
+    icon:"aplicacion",
+    color:"text-yellow-500"
+  },
+  {
+    id: 6,
+    name: "Oaklan",
+    description: "Aplicación para gestionar inventarios con Vue y Node.js.",
+    technologies: ["vue.png", "node.png", "vuetify.png","javascript.jpg"],
+    status: "Complete",
+    createdBy: "Daniel Montes",
+    techName : ['Vue','Node','Vuetify','Javascript','Git','SQL','NPM'],
+    href: "https://inventariosapp.com",
+    icon:"bolsa-de-herramientas",
+    color:"text-green-500"
+  }
+];
   </script>

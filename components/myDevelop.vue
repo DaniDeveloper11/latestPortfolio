@@ -7,7 +7,7 @@
         <div class="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
           <!-- Main area -->
           <div class="border-b border-green-600 dark:border-green-800 pb-5">
-            <h3 class="text-base font-semibold text-gray-900 dark:text-gray-200">Proyectos</h3>
+            <h3 class="text-base font-semibold text-gray-900 dark:text-gray-200">Proyectos Reales</h3>
           </div>
 
           <projectList></projectList>
@@ -19,7 +19,7 @@
 
         <div class="border border-green-500 dark:border-green-800 t px-4 py-5 sm:px-6 rounded-2xl">
           
-            <div class=" border-gray-200 text-wrap pb-5">
+            <div id="contacto" class=" border-gray-200 text-wrap pb-5">
 
             <h3 class="flex text-base font-semibold text-green-800 dark:text-gray-200">
                 <nuxt-icon name='gmail' class="mr-2 text-green-500 dark:text-green-600"></nuxt-icon>

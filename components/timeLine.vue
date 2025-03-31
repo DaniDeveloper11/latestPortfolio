@@ -1,5 +1,5 @@
 <template>
-    <div class="flow-root my-10">
+    <div id="experiencia" class="flow-root my-10">
       <ul role="list" class="-mb-8">
         <li v-for="(event, eventIdx) in timeline" :key="event.id">
           <div class="relative pb-8">
