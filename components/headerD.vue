@@ -15,9 +15,9 @@
         </div>
         <PopoverGroup class="hidden lg:flex lg:gap-x-12 bg-green-500 dark:bg-green-700 px-8 py-1.5 rounded-4xl opacity-90 z-50">
           <Popover class="relative">
-            <PopoverButton class="flex items-center gap-x-1 text-sm/6 font-semibold  text-white">
+            <PopoverButton class="flex items-center gap-x-1 text-sm/6 font-semibold  text-white cursor-pointer">
               Proyectos
-              <ChevronDownIcon class="size-5 flex-none text-gray-400" aria-hidden="true" />
+              <ChevronDownIcon class="size-5 flex-none text-white" aria-hidden="true" />
             </PopoverButton>
   
             <transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">

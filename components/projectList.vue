@@ -21,7 +21,7 @@
          <techGroup :images="project.technologies"></techGroup>
           <nuxt-link :to="`/projects/${getSlug(project.name)}`"
           class="hidden rounded-md bg-white dark:bg-gray-900 dark:hover:bg-green-700 dark:text-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-xs  sm:block"
-            >View project<span class="sr-only">, {{ project.name }}</span></nuxt-link
+            >Ver Detalles<span class="sr-only">, {{ project.name }}</span></nuxt-link
           >
           <!-- <Menu as="div" class="relative flex-none">
             <MenuButton class="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900">

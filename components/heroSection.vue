@@ -7,15 +7,16 @@
         <img src="/perfil.jpg" alt="perfil" class="w-16 h-16 rounded-full mb-4" >
 
         <h1 class="text-4xl font-bold text-white">
-            Software designer, founder, <br /> and amateur astronaut.
-        </h1>
-        <p class="mt-4 text-lg max-w-lg text-green-100">
-            I'm Spencer, a software designer and entrepreneur based in New York City. 
-            I'm the founder and CEO of Planetaria, where we develop technologies that 
-            empower regular people to explore space on their own terms.
-        </p>
+    Desarrollador Frontend, Diseñador,<br /> y Creador de experiencias digitales.
+</h1>
+<p class="mt-4 text-lg max-w-lg text-green-100">
+    Soy Daniel, un apasionado del diseño y desarrollo web con base en México. 
+    Combino creatividad y precisión técnica para construir interfaces modernas, 
+    intuitivas y escalables. Actualmente colaboro en proyectos que transforman ideas en productos reales.
+</p>
+
         <div class="flex space-x-4 my-6">
-            <a v-for="link in linkArray" :key="link" :href="link.link" target="_blank" class="text-gray-400 dark:hover:text-white">
+            <a v-for="link in linkArray" :key="link" :href="link.link" target="_blank" class="text-gray-400 hover:text-white">
                 <nuxt-icon :name='link.icon'></nuxt-icon>
             </a>
         </div>
