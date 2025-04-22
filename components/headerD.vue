@@ -87,12 +87,18 @@
                     <ChevronDownIcon :class="[open ? 'rotate-180' : '', 'size-5 flex-none']" aria-hidden="true" />
                   </DisclosureButton>
                   <DisclosurePanel class="mt-2 space-y-2">
-                    <DisclosureButton v-for="item in [...projects]" :key="item.name" as="a" :href="item.href" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">{{ item.name }}</DisclosureButton>
+                    <nuxt-link
+                    @click="mobileMenuOpen = false"
+                     v-for="item in [...projects]" :key="item.name" as="a" :to="`/projects/${getSlug(item.name)}`"
+                     class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">{{ item.name }}
+                    </nuxt-link>
                   </DisclosurePanel>
                 </Disclosure>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">Acerca de mi</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">Mi experiencia</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">Descargar Curriculum</a>
+                <a href="#" @click="mobileMenuOpen = false" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">Acerca de mi</a>
+                <a href="#experiencia" @click="mobileMenuOpen = false" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">Mi experiencia</a>
+                <a href="#contacto" @click="mobileMenuOpen = false" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">Dejame un correo</a>
+                <a href="https://drive.google.com/uc?export=download&id=1Tw9oNwLl45yYpONDOq1lj_3AMyOyU3cF"
+                 class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-white hover:bg-gray-50">Descarga mi Curriculum</a>
               </div>
               <div class="py-6 flex gap-4 ">
                 <a type="button" 
@@ -116,6 +122,7 @@
               </div>
             </div>
           </div>
+          <footerComponent></footerComponent>
         </DialogPanel>
       </Dialog>
     </header>
@@ -123,6 +130,7 @@
   
   <script setup>
   import { ref } from 'vue'
+  import footerComponent from '@/components/footer.vue';
   import { useColorMode } from '@vueuse/core'
   import darkToggle from '@/components/darkToggle.vue'
   import {

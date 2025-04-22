@@ -1,9 +1,7 @@
 <template>
     <footer class="">
       <div class="mx-auto max-w-7xl overflow-hidden px-6 py-4 sm:py-4 lg:px-8">
-        <nav class="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
-          <a v-for="item in main" :key="item.name" :href="item.href" class="text-gray-400 hover:text-white">{{ item.name }}</a>
-        </nav>
+
         <div class="mt-16 flex justify-center gap-x-10">
             <a v-for="link in linkArray " :key="link" :href="link.link" target="_blank" class="text-gray-400 dark:hover:text-white">
                 <nuxt-icon :name='link.icon'></nuxt-icon>
@@ -18,14 +16,7 @@
   import { defineComponent, h } from 'vue'
   
   
-    const main =  [
-      { name: 'About', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Jobs', href: '#' },
-      { name: 'Press', href: '#' },
-      { name: 'Accessibility', href: '#' },
-      { name: 'Partners', href: '#' },
-    ]
+
     const linkArray = [
     {icon:'github',link:'https://github.com/DaniDeveloper11'},
     {icon:'linkedin',link:'https://www.linkedin.com/in/daniel-montes-28686a258/'},
