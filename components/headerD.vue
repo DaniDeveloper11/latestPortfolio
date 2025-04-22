@@ -42,9 +42,14 @@
                   </div>
                 </div>
                 <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  <a v-for="item in callsToAction" :key="item.name" :href="item.href" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
-                    <component :is="item.icon" class="size-5 flex-none text-gray-400" aria-hidden="true" />
-                    {{ item.name }}
+                  <a v-for="item in callsToAction" :key="item.name" :href="item.href"
+                   class="group relative flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
+                   :class="`${item.color}`"
+                   >
+                    <!-- <component :is="item.icon" class="size-5 flex-none text-gray-400" aria-hidden="true" /> -->
+                    <nuxt-icon :name="item.icon" class="text-gray-600 transition duration-300 group-hover:text-inherit"
+                    ></nuxt-icon>
+                    <span class="text-gray-700">{{ item.name }}</span>
                   </a>
                 </div>
               </PopoverPanel>
@@ -133,8 +138,12 @@
     { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
   ]
   const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-    { name: 'Contact sales', href: '#', icon: PhoneIcon },
+    { name: 'Curriculum',
+     href:'https://drive.google.com/uc?export=download&id=1Tw9oNwLl45yYpONDOq1lj_3AMyOyU3cF',
+      icon:"download",
+      color:"text-green-500"
+    },
+    { name: 'Llamame', href: '#', icon: "phone-icon", color:"text-green-500" },
   ]
   const getSlug = (name) => {
   return name.toLowerCase().replace(/\s+/g, "-").replace(/'/g, "");

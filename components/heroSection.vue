@@ -1,6 +1,6 @@
 <template>
     
-        <section class=" lg:relative mx-auto lg:mx-40 max-w-7xl px-4 sm:px-6 lg:px-8 pt-5
+        <section class="lg:relative mx-auto lg:mx-24 lg:max-w-5xl 2xl:mx-40 2xl:max-w-7xl px-4 sm:px-6 lg:px-8 pt-5
         bg-gradient-to-b from-green-400 via-green-600 to-white
          dark:bg-gradient-to-b dark:from-green-600 dark:via-green-700 dark:to-[#1d1f21] dark:text-gray-200 py-2
          flex-col items-center  text-gray-900  ">
@@ -20,7 +20,7 @@
                 <nuxt-icon :name='link.icon'></nuxt-icon>
             </a>
         </div>
-        <terminal class="hidden lg:block absolute top-20 right-0 -mr-40"></terminal>
+        <terminal class="hidden lg:block absolute xl:top-20 xl:right-0 -mr-40"></terminal>
     </section>
     
 

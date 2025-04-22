@@ -4,12 +4,12 @@
         <headerD/>
       </header>
   
-      <main class=" flex mx-auto lg:mx-40 max-w-7xl px-4 sm:px-6 lg:px-8 pt-5">
+      <main class="flex mx-auto lg:mx-0 2xl:mx-40 max-w-8xl px-4 sm:px-6 lg:px-8">
         <aside class="sticky top-8 hidden w-44 shrink-0 lg:block">
         <!-- Left column area -->
           <rightNav></rightNav>
       </aside>
-        <div class="flex-1">
+        <div class="flex-1 min-w-0 overflow-hidden">
         <slot />
         </div>
       </main>

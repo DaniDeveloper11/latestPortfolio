@@ -35,7 +35,7 @@
     {
       id: 1,
       src:'mavi.jpg',
-      content: 'Muebles America',
+      content: 'MAVI de Occidente',
       target: 'Full Stack Developer',
       href: '#',
       date: 'Sep 24 - Actualmente',
@@ -57,7 +57,7 @@
     {
       id: 3,
       src:'cfe.png',
-      content: 'CFE (beario)',
+      content: 'CFE (Intern)',
       target: 'Full Stack Developer',
       href: '#',
       date: 'Sep 28',
@@ -78,10 +78,10 @@
     },
     {
       id: 5,
-      content: 'Completed interview with',
-      target: 'Katherine Snyder',
+      content: 'Ingenieria en Computacion',
+      target: 'CUCEI',
       href: '#',
-      date: 'Oct 4',
+      date: '2018 - 2023',
       datetime: '2020-10-04',
       icon: CheckIcon,
       iconBackground: 'bg-green-500',
