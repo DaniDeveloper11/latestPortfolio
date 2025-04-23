@@ -15,7 +15,7 @@ const { data: home } = await useAsyncData(() => queryCollection('content').path(
     <div class="mx-auto max-w-3xl md:px-4 relative ">
       <div class="overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-700">
         <nuxt-link to="/"  
-        type="button" class="flex justify-center0 rounded-4xl bg-indigo-50 px-3 py-2 text-sm font-semibold text-indigo-600 shadow-xs hover:bg-indigo-100">
+        type="button" class="flex justify-center0 rounded-4xl bg-transparent px-3 py-2 text-sm font-semibold text-indigo-600 shadow-xs hover:bg-indigo-100">
             <nuxt-icon name="arrow-left-icon"></nuxt-icon>
           <span class="my-auto">Inicio</span>
         </nuxt-link>

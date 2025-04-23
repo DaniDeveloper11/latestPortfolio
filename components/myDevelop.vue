@@ -9,8 +9,8 @@
           <div class="border-b border-green-600 dark:border-green-800 pb-5">
             <h3 class="text-base font-semibold text-gray-900 dark:text-gray-200">Proyectos Reales</h3>
           </div>
-
           <projectList></projectList>
+          <repository class="my-20"></repository>
         </div>
       </div>
 
@@ -43,5 +43,6 @@
     import emailBody from './emailBody.vue';
     import timeLine from './timeLine.vue';
     import projectList from './projectList.vue';
+    import repository from './repository.vue';
 
 </script>

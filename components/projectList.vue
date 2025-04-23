@@ -2,7 +2,7 @@
     <ul role="list" class="divide-y divide-green-500 dark:divide-green-800">
       <li v-for="project in projects" :key="project.id" @click="selectProject(project)" 
       class="flex items-center justify-between gap-x-6 py-5 cursor-pointer dark:hover:bg-green-900 hover:bg-green-500 px-4 rounded-lg">
-        <div class="min-w-0">
+        <nuxt-link :to="`/projects/${getSlug(project.name)}`" class="min-w-0">
           <div class="flex items-start gap-x-3">
             <p class="text-sm/6 font-semibold text-gray-900 dark:text-gray-200">{{ project.name }}</p>
             <p :class="[statuses[project.status], 'mt-0.5 rounded-md px-1.5 py-0.5 text-xs font-medium whitespace-nowrap ring-1 ring-inset']">{{ project.status }}</p>
@@ -16,7 +16,7 @@
             </svg>
             <p class="truncate">Created by {{ project.createdBy }}</p>
           </div> -->
-        </div>
+        </nuxt-link>
         <div class="flex flex-none items-center gap-x-4">
          <techGroup :images="project.technologies"></techGroup>
           <nuxt-link :to="`/projects/${getSlug(project.name)}`"

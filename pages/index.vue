@@ -3,6 +3,7 @@
      <heroSection></heroSection>
       <imagesSection></imagesSection>
       <myDevelop></myDevelop>
+      
     </div>
 </template>
 <script setup>
