@@ -17,7 +17,7 @@
       <div class="shrink-0 border-t border-green-500 px-4 py-6 sm:px-6 lg:w-96 lg:border-t-0 lg:border-l lg:pr-8 xl:pr-6">
         <!-- Right column area -->
 
-        <div class="border border-green-500 dark:border-green-800 t px-4 py-5 sm:px-6 rounded-2xl">
+        <div class="border border-green-500 dark:border-green-800 bg-green-600/10  t px-4 py-5 sm:px-6 rounded-2xl">
           
             <div id="contacto" class=" border-gray-200 text-wrap pb-5">
 

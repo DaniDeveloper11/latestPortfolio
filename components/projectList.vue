@@ -71,7 +71,7 @@
     technologies: ["Vue.png", "Tailwind.jpg", "javascript.jpg", "node.png","sql.png","vite.jpg"],
     techName : ['Vue','Node','Vuetify','Javascript','Git'],
     status: "Complete",
-    href: "https://miportafolio.com",
+    href: "https://amazing-capybara-41930d.netlify.app/",
   },
   {
     id: 2,
@@ -81,7 +81,7 @@
     status: "In progress",
     createdBy: "Daniel Montes",
     techName : ['Vue','PHP','Vuetify','Javascript','Git','SQL','NPM'],
-    href: "https://ecommercevue.com",
+    href: "https://lionsprotection.com.mx/guadalajara/",
   },
   {
     id: 3,
@@ -91,18 +91,18 @@
     status: "In progress",
     createdBy: "Daniel Montes",
     techName : ['Vue','VueStoreFront','Bootstrap','Javascript','Git','SQL','NPM','Typescript','GraphQL','Node','Docker'],
-    href: "https://ecommercevue.com",
+    href: "https://www.mueblesamerica.mx",
   },
-  {
-    id: 4,
-    name: "FoodFinders Adminpanel",
-    description: "Aplicación para delivery con Angular y Firebase.",
-    technologies: ["angular.png", "firebase.png", "tailwind.jpg","typescript.jpg","docker.png"],
-    status: "In progress",
-    createdBy: "Daniel Montes",
-    techName : ['Angular','Tailwindcss','Git','Firebase','NPM','Typescript','Node','Docker'],
-    href: "https://foodfinders.com",
-  },
+  // {
+  //   id: 4,
+  //   name: "FoodFinders Adminpanel",
+  //   description: "Aplicación para delivery con Angular y Firebase.",
+  //   technologies: ["angular.png", "firebase.png", "tailwind.jpg","typescript.jpg","docker.png"],
+  //   status: "In progress",
+  //   createdBy: "Daniel Montes",
+  //   techName : ['Angular','Tailwindcss','Git','Firebase','NPM','Typescript','Node','Docker'],
+  //   href: "https://restaurante.com",
+  // },
   {
     id: 5,
     name: "SoftCarmel",
@@ -111,7 +111,7 @@
     status: "Complete",
     createdBy: "Daniel Montes",
     techName : ['Vue','Tailwindcss','Git','NPM','Javascript'],
-    href: "https://dashboard.com",
+    href: "https://www.softcarmel.com",
   },
   {
     id: 6,
@@ -121,7 +121,7 @@
     status: "Complete",
     createdBy: "Daniel Montes",
     techName : ['Vue','Node','Vuetify','Javascript','Git','SQL','NPM'],
-    href: "https://inventariosapp.com",
+    href: "https://www.oakland-net.com",
   }
 ];
 ;

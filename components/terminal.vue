@@ -59,10 +59,10 @@ const isTypingClear = ref(false);
 const colorMode = useColorMode();
 
 onMounted(() => {
-  // setTimeout(() => {
-  //  startFlow();
+  setTimeout(() => {
+   startFlow();
 
-  // },3000)
+  },3000)
 });
 
 // **Inicia el flujo completo de la terminal**

@@ -1,10 +1,18 @@
 <script setup>
+import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { useAsyncData } from '#app';
+import { useSelectedProjectStore } from '@/stores/useSelectedProjectStore'
+
 const route = useRoute();
 const slug = route.params.slug
-
+const selectProjectStore = useSelectedProjectStore();
+const projectUrl = computed(() => selectProjectStore.selected?.href || '/')
 const { data: home } = await useAsyncData(() => queryCollection('content').path(`/projects/${slug}`).first())
+const projectHref = ref("")
+onMounted(() => {
+  projectHref.value = projectUrl.value
+})
 </script>
 
 <template>
@@ -27,7 +35,7 @@ const { data: home } = await useAsyncData(() => queryCollection('content').path(
         </div>
       </div>
 
-      <floatingButton class="cursor-pointer bottom-0 -right-3 z-50 absolute "></floatingButton>
+      <floatingButton :href="projectHref" class="cursor-pointer bottom-0 -right-3 z-50 absolute "></floatingButton>
 
     </div>
   </div>

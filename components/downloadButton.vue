@@ -136,7 +136,7 @@
       rel="noopener noreferrer"
       download
       @click="triggerDownload"
-      class="hidden md:block"
+      class=" md:block"
     >
       <button
         class="download-btn pixel-corners"
