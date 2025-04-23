@@ -132,7 +132,7 @@
 </style>
 <template>
     <a
-      href="https://drive.google.com/uc?export=download&id=1Tw9oNwLl45yYpONDOq1lj_3AMyOyU3cF"
+      href="https://drive.google.com/uc?export=download&id=11Whrzudwe_L0b6Cy0cI_uTtmkvyOkj_N"
       rel="noopener noreferrer"
       download
       @click="triggerDownload"
