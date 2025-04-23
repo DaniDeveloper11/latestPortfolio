@@ -7,7 +7,7 @@
         <img src="/perfil.jpg" alt="perfil" class="w-16 h-16 rounded-full mb-4" >
 
         <h1 class="text-4xl font-bold text-white">
-    Desarrollador Frontend, Diseñador,<br /> y Creador de experiencias digitales.
+    Desarrollador FullStack, Diseñador,<br /> y Creador de experiencias digitales.
 </h1>
 <p class="mt-4 text-lg max-w-lg text-green-100">
     Soy Daniel, un apasionado del diseño y desarrollo web con base en México. 
